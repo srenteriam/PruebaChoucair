@@ -1,10 +1,10 @@
 package com.choucair.stepdefinitions;
 
 import com.choucair.tasks.SingIn;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import org.junit.Before;
 
 
 import static net.serenitybdd.screenplay.actors.OnStage.*;
