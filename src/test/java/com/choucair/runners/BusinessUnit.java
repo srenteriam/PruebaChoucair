@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "com/choucair/stepdefinitions",
         features = "src/test/resources/com.choucair/features/business_unit.feature",
+        tags="@Prueba1",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 
