@@ -9,7 +9,7 @@ Feature: Añadir nueva reunion
     Given "Actor" Desea navegar a la pagina "https://serenity.is/demo/"
     And Se logea con usuario "admin" y password "serenity"
 
-    Scenario: Crear una nueva reunion
+  Scenario: Crear una nueva reunion
       When Crea una reunion con los datos
         | meeting_name   | Reunion Daily TAE         |
         | meeting_type   | General                   |

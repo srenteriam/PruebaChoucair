@@ -4,7 +4,8 @@ import com.choucair.questions.ValidateText;
 import com.choucair.tasks.CreateMeeting;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static com.choucair.userinterfaces.MeetingPage.NAME_MEETING;
@@ -27,3 +28,4 @@ public class MeetingStepdefinitions {
     public void validaQueLaReuniónSeHayaCreadoCorrectamente(String text) {
         theActorInTheSpotlight().should(seeThat(ValidateText.with(NAME_MEETING,text), equalTo(text)));
     }
+}
