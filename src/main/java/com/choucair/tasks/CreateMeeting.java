@@ -25,7 +25,7 @@ public class CreateMeeting implements Task {
         information = this.data.asMap(String.class, String.class);
         meeting = new Meeting(information.get("meeting_name"), information.get("meeting_type"), information.get("meeting_number"),
                 information.get("start_date"), information.get("end_date"), information.get("location"),
-                information.get("unit"),information.get("organized"),information.get("reporter")
+                information.get("unit"),information.get("organized by"),information.get("reporter")
         );
     }
 
