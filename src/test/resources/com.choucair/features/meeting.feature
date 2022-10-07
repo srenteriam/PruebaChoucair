@@ -11,15 +11,15 @@ Feature: Añadir nueva reunion
 
   Scenario: Crear una nueva reunion
       When Crea una reunion con los datos
-        | meeting_name   | Reunion Daily TAE         |
+        | meeting_name   | Reunion Daily             |
         | meeting_type   | General                   |
         | meeting_number | 6754                      |
-        | start_date     | 01/10/2022                |
+        | start_date     | 10/20/2022                |
         | time_start     | 09:00                     |
-        | end_date       | 01/10/2022                |
+        | end_date       | 10/20/2022                |
         | time_end       | 09:30                     |
         | location       | On Site                   |
-        | unit           | Acme Corp.                |
+        | unit           | Empleados                 |
         | organized by   | Jason Green               |
         | reporter       | Nicole Coleman            |
       Then Valida que la reunión "Reunion Daily TAE" se haya creado correctamente
