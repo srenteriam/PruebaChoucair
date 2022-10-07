@@ -25,14 +25,14 @@ public class CreateMeeting implements Task {
         information = this.data.asMap(String.class, String.class);
         meeting = new Meeting(information.get("meeting_name"), information.get("meeting_type"), information.get("meeting_number"),
                 information.get("start_date"), information.get("end_date"), information.get("location"),
-                information.get("unit"),information.get("organized by"),information.get("reporter")
+                information.get("unit"),information.get("organized by"),information.get("reporter"), information.get("attendee 1"),
+                information.get("attendee 2")
         );
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                new net.serenitybdd.screenplay.Performable[]{
                         Click.on(MEETING_LIST),
                         Click.on(MEETING_OPTION),
                         Click.on(BTN_NEW_MEETING),
@@ -50,7 +50,11 @@ public class CreateMeeting implements Task {
                         Enter.theValue(meeting.getOrganized()).into(USER_ORGANIZED).thenHit(Keys.TAB),
                         Click.on(LIST_REPORTERS),
                         Enter.theValue(meeting.getReporter()).into(REPORTER).thenHit(Keys.TAB),
-                        Click.on(SAVE_MEETING)});
+                        Click.on(ATTENDEE_LIST),
+                        Enter.theValue(meeting.getAttendee1()).into(ATTENDEE).thenHit(Keys.TAB),
+                        Click.on(ATTENDEE_LIST),
+                        Enter.theValue(meeting.getAttendee2()).into(ATTENDEE).thenHit(Keys.TAB),
+                        Click.on(SAVE_MEETING));
     }
 
     public static CreateMeeting with(DataTable data) {

@@ -53,6 +53,12 @@ public class MeetingPage extends PageObject {
     public static final Target REPORTER = Target.the("Opcion de reporter")
             .locatedBy("//*[@id='s2id_autogen10_search']");
 
+    public static final Target ATTENDEE_LIST = Target.the("Opciones de asistentes")
+            .locatedBy("//*[@id='s2id_autogen11']");
+
+    public static final Target ATTENDEE = Target.the("Agregar asistentes")
+            .locatedBy("//*[@id='s2id_autogen12_search']");
+
     public static final Target LIST_UNIT = Target.the("Listado de unidades de negocio")
             .locatedBy("//*[@class='field UnitId col-sm-6']//*[@class='select2-chosen']");
 

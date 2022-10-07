@@ -22,4 +22,6 @@ Feature: Añadir nueva reunion
         | unit           | Empleados                 |
         | organized by   | Jason Green               |
         | reporter       | Nicole Coleman            |
+        | attendee 1     | Alexis Lopez              |
+        | attendee 2     | Sara Torres               |
       Then Valida que la reunión "Reunion Daily TAE" se haya creado correctamente
