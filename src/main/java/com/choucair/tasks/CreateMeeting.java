@@ -32,7 +32,25 @@ public class CreateMeeting implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                new net.serenitybdd.screenplay.Performable[]{Click.on(MEETING_LIST), Click.on(MEETING_OPTION), Click.on(BTN_NEW_MEETING), Enter.theValue(meeting.getMeetingName()).into(INPUT_NAME), Click.on(LIST_TYPE), Enter.theValue(meeting.getMeetingType()).into(INPUT_TYPE), Click.on(TYPE), Enter.theValue(meeting.getMeetingNumber()).into(INPUT_NUMBER), Enter.theValue(meeting.getStartDate()).into(INPUT_STAR_DATE), Enter.theValue(meeting.getEndDate()).into(INPUT_END_DATE), Click.on(INPUT_LOCATION), Enter.theValue(meeting.getLocation()).into(LOCATION_TYPE).thenHit(Keys.TAB), Click.on(LIST_UNIT), Enter.theValue(meeting.getUnit()).into(UNIT).thenHit(Keys.TAB), Click.on(LIST_USER_ORGANIZED), Enter.theValue(meeting.getOrganized()).into(USER_ORGANIZED).thenHit(Keys.TAB), Click.on(LIST_REPORTERS), Enter.theValue(meeting.getReporter()).into(REPORTER).thenHit(Keys.TAB), Click.on(SAVE_MEETING)});
+                new net.serenitybdd.screenplay.Performable[]{
+                        Click.on(MEETING_LIST),
+                        Click.on(MEETING_OPTION),
+                        Click.on(BTN_NEW_MEETING),
+                        Enter.theValue(meeting.getMeetingName()).into(INPUT_NAME),
+                        Click.on(LIST_TYPE), Enter.theValue(meeting.getMeetingType()).into(INPUT_TYPE),
+                        Click.on(TYPE),
+                        Enter.theValue(meeting.getMeetingNumber()).into(INPUT_NUMBER),
+                        Enter.theValue(meeting.getStartDate()).into(INPUT_STAR_DATE),
+                        Enter.theValue(meeting.getEndDate()).into(INPUT_END_DATE),
+                        Click.on(INPUT_LOCATION),
+                        Enter.theValue(meeting.getLocation()).into(LOCATION_TYPE).thenHit(Keys.TAB),
+                        Click.on(LIST_UNIT),
+                        Enter.theValue(meeting.getUnit()).into(UNIT).thenHit(Keys.TAB),
+                        Click.on(LIST_USER_ORGANIZED),
+                        Enter.theValue(meeting.getOrganized()).into(USER_ORGANIZED).thenHit(Keys.TAB),
+                        Click.on(LIST_REPORTERS),
+                        Enter.theValue(meeting.getReporter()).into(REPORTER).thenHit(Keys.TAB),
+                        Click.on(SAVE_MEETING)});
     }
 
     public static CreateMeeting with(DataTable data) {
